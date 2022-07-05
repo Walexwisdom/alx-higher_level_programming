@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-from sys import argv
+# 2-args.py
+# Yovo Koffi Vianney
+
 if __name__ == "__main__":
-    argc = len(argv) - 1
-    print("{:d} argument".format(argc), end='')
-    if argc == 0:
-        print("s.")
-    elif argc == 1:
-        print(":")
+    """Print the number of and list of arguments."""
+    import sys
+
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
     else:
-        print("s:")
-    for num in range(1, argc + 1):
-        print("{:d}: {:s}".format(num, argv[num]
+        print("{} arguments:".format(count))
+    for i in range(count):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
