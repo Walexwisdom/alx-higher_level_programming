@@ -1,14 +1,3 @@
 #!/usr/bin/python3
-# 102-complex_delete.py
-# Adewale Noah ALAO
-
-
-def complex_delete(a_dictionary, value):
-    """Delete keys with a specific value in a dictionary."""
-    while value in a_dictionary.values():
-        for k, v in a_dictionary.items():
-            if v == value:
-                del a_dictionary[k]
-                break
-
-    return (a_dictionary)
+def square_matrix_map(matrix=[]):
+    return (list(map(lambda x: list(map(lambda y: y ** 2, x[:])), matrix)))
